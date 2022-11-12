@@ -14,10 +14,10 @@ def get_everything_from_speaker (name):
     df = pd.read_sql_query(query, engine)
     return df.to_dict(orient="records")
 
-def get_everything_from_multiple_speaker (name1,name2):
-    query = f"""SELECT * 
+def get_everything_from_multiple_speaker (name1,name2,name3):
+    query = f"""SELECT comms, mission_time, speaker 
     FROM apollo11
-    WHERE (speaker = '{name1}' OR speaker = '{name2}');"""
+    WHERE (speaker = '{name1}' OR speaker = '{name2}' OR speaker = '{name3}');"""
 
     df = pd.read_sql_query(query, engine)
     return df.to_dict(orient="records")
@@ -30,10 +30,10 @@ def get_just_comms (name):
     df = pd.read_sql_query(query, engine)
     return df.to_dict(orient="records")
 
-def get_just_multiple_comms (name1, name2):
+def get_just_multiple_comms (name1, name2, name3):
     query = f"""SELECT comms 
     FROM apollo11
-    WHERE (speaker = '{name1}' OR speaker = '{name2}');"""
+    WHERE (speaker = '{name1}' OR speaker = '{name2}' OR speaker = '{name3}');"""
 
     df = pd.read_sql_query(query, engine)
     return df.to_dict(orient="records")

@@ -29,9 +29,9 @@ def everything_from_speaker (name):
     return jsonify(queries.get_everything_from_speaker(name))
 
 # SQL get everything from MULTIPLE speakers
-@app.route("/sql/all/<name1>&<name2>")
-def everything_from_multiple_speaker (name1,name2):
-    return jsonify(queries.get_everything_from_multiple_speaker(name1,name2))
+@app.route("/sql/all/<name1>&<name2>&<name3>")
+def everything_from_multiple_speaker (name1,name2,name3):
+    return jsonify(queries.get_everything_from_multiple_speaker(name1,name2,name3))
 
 #SQL get only comms from ONE speaker
 @app.route("/sql/comms/<name>")
@@ -47,9 +47,9 @@ def sa_from_speaker (name):
     return jsonify([sia.polarity_scores(i["comms"])["compound"] for i in everything])
 
 # SENTIMENT ANALYSIS from MULTIPLE speakers
-@app.route("/sa/<name1>&<name2>")
-def sa_from_multiple_speakers (name1, name2):
-    everything = queries.get_just_multiple_comms(name1, name2)
+@app.route("/sa/<name1>&<name2>&<name3>")
+def sa_from_multiple_speakers (name1, name2, name3):
+    everything = queries.get_just_multiple_comms(name1, name2, name3)
     #return jsonify(everything)
     return jsonify([sia.polarity_scores(i["comms"])["compound"] for i in everything])
 
