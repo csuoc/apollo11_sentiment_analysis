@@ -30,6 +30,14 @@ def descent_analysis():
     fig3.update_xaxes(title_text="Mission time(s)")
     fig3.update_yaxes(title_text="Compound")
     fig3.update_traces(showlegend=True)
+    fig3.add_annotation(x=369564, y=0.5719,
+            text="It's coming down beautifully",
+            showarrow=True,
+            arrowhead=1)
+    fig3.add_annotation(x=369737, y=-0.4824,
+            text="Program Alarm",
+            showarrow=True,
+            arrowhead=1)
 
     return fig3.show()
 
