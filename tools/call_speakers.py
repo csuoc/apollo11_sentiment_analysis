@@ -6,9 +6,9 @@ import requests
 # NEIL ARMSTRONG (CDR)
 
 def armstrong_full():
-    response_arm = requests.get(url="http://127.0.0.1:9000/sql/all/CDR&CDRTRAN&CDREVA")
+    response_arm = requests.get(url="http://127.0.0.1:9000/sql/all/CDR&CDRTRAN&CDREAGLE&CDREVA")
     armstrong_full = pd.DataFrame(response_arm.json())
-    response_arm_com = requests.get(url="http://127.0.0.1:9000/sa/CDR&CDRTRAN&CDREVA")
+    response_arm_com = requests.get(url="http://127.0.0.1:9000/sa/CDR&CDRTRAN&CDREAGLE&CDREVA")
     armstrong_compound = response_arm_com.json()
     armstrong_full["compound"] = armstrong_compound
     return armstrong_full
@@ -28,6 +28,14 @@ def armstrong_tran():
     armstrong_compound = response_arm_com.json()
     armstrong_tran["compound"] = armstrong_compound
     return armstrong_tran
+
+def armstrong_eagle():
+    response_arm = requests.get(url="http://127.0.0.1:9000/sql/all/CDREAGLE")
+    armstrong_eagle = pd.DataFrame(response_arm.json())
+    response_arm_com = requests.get(url="http://127.0.0.1:9000/sa/CDREAGLE")
+    armstrong_compound = response_arm_com.json()
+    armstrong_eagle["compound"] = armstrong_compound
+    return armstrong_eagle
 
 def armstrong_eva():
     response_arm = requests.get(url="http://127.0.0.1:9000/sql/all/CDREVA")
@@ -50,9 +58,9 @@ def collins_full():
 # BUZZ ALDRIN (LMP)
 
 def aldrin_full():
-    response_aldrin= requests.get(url="http://127.0.0.1:9000/sql/all/LMP&LMPTRAN&LMPEVA")
+    response_aldrin= requests.get(url="http://127.0.0.1:9000/sql/all/LMP&LMPTRAN&LMPEAGLE&LMPEVA")
     aldrin_full = pd.DataFrame(response_aldrin.json())
-    response_aldrin_com = requests.get(url="http://127.0.0.1:9000/sa/LMP&LMPTRAN&LMPEVA")
+    response_aldrin_com = requests.get(url="http://127.0.0.1:9000/sa/LMP&LMPTRAN&LMPEAGLE&LMPEVA")
     aldrin_compound = response_aldrin_com.json()
     aldrin_full["compound"] = aldrin_compound
     return aldrin_full
@@ -72,6 +80,14 @@ def aldrin_tran():
     aldrin_compound = response_aldrin_com.json()
     aldrin_tran["compound"] = aldrin_compound
     return aldrin_tran
+
+def aldrin_eagle():
+    response_aldrin= requests.get(url="http://127.0.0.1:9000/sql/all/LMPEAGLE")
+    aldrin_eagle = pd.DataFrame(response_aldrin.json())
+    response_aldrin_com = requests.get(url="http://127.0.0.1:9000/sa/LMPEAGLE")
+    aldrin_compound = response_aldrin_com.json()
+    aldrin_eagle["compound"] = aldrin_compound
+    return aldrin_eagle
 
 def aldrin_eva():
     response_aldrin= requests.get(url="http://127.0.0.1:9000/sql/all/LMPEVA")
