@@ -2,6 +2,5 @@
 
 <img src="./images/Apollo11-02.gif" width=400>
 
- <video width="320" height="240" controls>
-  <source src="./images/Intro project.mp4" type="video/mp4">
-</video>
+
+[![Intro project](https://img.youtube.com/vi/_acgFbMgybA/0.jpg)](https://www.youtube.com/watch?v=_acgFbMgybA)
