@@ -1,4 +1,4 @@
-# Decrypting Armstrong, Aldrin and Collins astronauts feelings on July 20, 1969
+# The other side Armstrong, Aldrin and Collins: decrypting the audio
 
 CLICK on the image to see the promotional video:
 
