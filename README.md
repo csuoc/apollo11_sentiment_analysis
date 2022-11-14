@@ -63,8 +63,6 @@ Summary of the tools folder:
 
 ### 5.1 The descent
 
-<img src="images/orbit.gif" width=400>
-
 The Apollo 11 lunar module Eagle took about 12 and a half to go from its orbital speed to a soft touchdown on Mare Tranquilitates. This was the first Apollo landing and it would prove to be the most arduous.
 
 About 500 km from the landing site, Eagle's main engine would be ignited to begin the descent to the surface, an event called Power Descent Initation, or PDI.
@@ -89,8 +87,6 @@ I think it is especially important to note how cool the astronauts' minds were. 
 
 ### 5.2. The moonwalk
 
-<img src="images/firststep.jpg" width=400>
-
 Once in orbit, everything had to go very quickly because their life support was very limited.
 
 The surface walk lasted approximately 3 hours. A sentimental analysis of this walk can be found in the following graph.
@@ -109,7 +105,6 @@ The descriptive statistical analysis is also noteworthy. For example, Armstrong 
 
 ### 5.3. One small step for a man, one giant leap for mankind
 
-<img src="images/stepmoon.jpg" width=300>
 
 **It's really curious to see how the sentence that changed the course of the Cold War has a compound value of... ZERO** However, the following sentence gains more popularity.
 
@@ -117,12 +112,14 @@ The descriptive statistical analysis is also noteworthy. For example, Armstrong 
 
 ### 5.4. President Nixon speech
 
-<img src="images/nixon.jpg" width=400>
-
 Richard Nixon telephoned via satellite the astronauts on the Moon. His speech was also transcribed and analyzed via sentiment analysis
 
 <img src="images/Analysis/speech.JPG">
 
+
+<video width="400" controls>
+  <source src="videos/396990.mp4" type="video/mp4">
+</video>
 
 ## Links and Resources
 
