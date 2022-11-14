@@ -105,7 +105,7 @@ def nixon_analysis():
 
     nixon_speech = nixon()
     fig1 = px.line(nixon_speech, x="mission_time", y="compound", title="Compound analysis of Nixon speech")
-    fig1.update_traces(line_color='yellow', name="President Nixon")
+    fig1.update_traces(line_color='greenyellow', name="President Nixon")
 
     fig1.update_xaxes(title_text="President Nixon speech")
     fig1.update_yaxes(title_text="Compound")
