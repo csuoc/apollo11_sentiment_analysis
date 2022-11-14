@@ -34,15 +34,15 @@ The database was extracted from https://github.com/clausd/Moon and it's original
 
 - Firstly, use the apollo11.csv provided in the data folder to create a MySQL schema called **apollo_transcripts** and create a table with the following structure:
 
-    <img src="images/tablemysql.jpg">
+<img src="images/tablemysql.jpg">
 
 - Secondly, open a terminal and execute **main.py** file, found in the root. The main file contains the necessary information to setup and execute the Flask API. It also connects to MySQL server and your table recently created.
 
-    <img src="images/terminal.jpg">
+<img src="images/terminal.jpg">
 
 - Thirdly, open a new tab in your web browser and use the link provided by the terminal to access the API. Try to run some queries to verify everything is correct.
 
-    <img src="images/api.jpg">
+<img src="images/api.jpg">
 
 - Open Analysis.ipynb and execute all the cells to show up the data analysis.
 
@@ -85,9 +85,7 @@ Most of the positive sentences are those in which the pilots see that everything
 
 I think it is especially important to note how cool the astronauts' minds were. They were not moved by anything and all their sentences obeyed commands. It is not until they reach the surface that they give more subjective details of what they are experiencing.
 
-<video width=400 controls>
-        <source src="videos/369354.mp4" type="video/mp4">
-</video>
+
 
 ## Links and Resources
 
