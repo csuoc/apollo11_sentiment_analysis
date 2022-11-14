@@ -34,15 +34,15 @@ The database was extracted from https://github.com/clausd/Moon and it's original
 
 - Firstly, use the apollo11.csv provided in the data folder to create a MySQL schema called **apollo_transcripts** and create a table with the following structure:
 
-    <img src="images/tablemysql.JPG">
+    <img src="images/API/tablemysql.JPG">
 
 - Secondly, open a terminal and execute **main.py** file, found in the root. The main file contains the necessary information to setup and execute the Flask API. It also connects to MySQL server and your table recently created.
 
-    <img src="images/terminal.JPG" width=300>
+    <img src="images/API/terminal.JPG" width=400>
 
 - Thirdly, open a new tab in your web browser and use the link provided by the terminal to access the API. Try to run some queries to verify everything is correct.
 
-    <img src="images/api.JPG" width=300>
+    <img src="images/API/api.JPG" width=500>
 
 - Open Analysis.ipynb and execute all the cells to show up the data analysis.
 
@@ -63,6 +63,8 @@ Summary of the tools folder:
 
 ### 5.1 The descent
 
+<img src="images/orbit.gif" width=400>
+
 The Apollo 11 lunar module Eagle took about 12 and a half to go from its orbital speed to a soft touchdown on Mare Tranquilitates. This was the first Apollo landing and it would prove to be the most arduous.
 
 About 500 km from the landing site, Eagle's main engine would be ignited to begin the descent to the surface, an event called Power Descent Initation, or PDI.
@@ -75,7 +77,7 @@ Once the burn began, further difficulties would mark Eagle's final descent to th
 
 **The following plot shows the complete sentiment analysis of the last 13 minutes of the landing approach phase, where various problem appear during the burnout**
 
-<img src="images/Analysis/Descent.JPG">
+<img src="images/Analysis/descent.JPG">
 
 The graph is divided into two parts: the Aldrin compound and the Armstrong compound. During the descent phase, Aldrin is the one taking control of the spacecraft, so he has the most interaction of the two. Armstrong was only in charge of overseeing the computer and Collins was left in charge of the Apollo spacecraft in orbit to the moon.
 
@@ -119,7 +121,7 @@ The descriptive statistical analysis is also noteworthy. For example, Armstrong 
 
 Richard Nixon telephoned via satellite the astronauts on the Moon. His speech was also transcribed and analyzed via sentiment analysis
 
-
+<img src="images/Analysis/speech.JPG">
 
 
 ## Links and Resources
