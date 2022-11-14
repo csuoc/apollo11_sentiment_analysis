@@ -30,14 +30,6 @@ def descent_analysis():
     fig3.update_xaxes(title_text="Mission time(s)")
     fig3.update_yaxes(title_text="Compound")
     fig3.update_traces(showlegend=True)
-    fig3.add_annotation(x=369564, y=0.5719,
-            text="It's coming down beautifully",
-            showarrow=True,
-            arrowhead=1)
-    fig3.add_annotation(x=369737, y=-0.4824,
-            text="Program Alarm",
-            showarrow=True,
-            arrowhead=1)
 
     return fig3.show()
 
@@ -47,8 +39,8 @@ def eva_analysis():
 
     armstrong_eva = armeva()
     aldrin_eva = aldeva()
-    aldrin_eva = aldrin_eva.loc[(aldrin_eva["mission_time"] >= 393768 & (aldrin_eva["mission_time"] <= 401918))]
-    armstrong_eva = armstrong_eva.loc[(armstrong_eva["mission_time"] >= 393768) & (armstrong_eva["mission_time"] <= 401918)]
+    aldrin_eva = aldrin_eva.loc[(aldrin_eva["mission_time"] >= 393768) & (aldrin_eva["mission_time"] <= 401918) & (aldrin_eva["compound"] >= 0.5) | (aldrin_eva["compound"] <= -0.5)]
+    armstrong_eva = armstrong_eva.loc[(armstrong_eva["mission_time"] >= 393768) & (armstrong_eva["mission_time"] <= 401918) & (armstrong_eva["compound"] >= 0.5) | (armstrong_eva["compound"] <= -0.5)]
 
     fig1 = px.line(aldrin_eva, x="mission_time", y="compound")
     fig1.update_traces(line_color='green', name="Aldrin")
@@ -62,7 +54,7 @@ def eva_analysis():
                             ))
 
     fig3.update_xaxes(title_text="Mission time(s) - Total time 3 hours")
-    fig3.update_yaxes(title_text="Compound")
+    fig3.update_yaxes(title_text="Compound >0.5 or < -0.5")
     fig3.update_traces(showlegend=True)
 
     return fig3.show()
