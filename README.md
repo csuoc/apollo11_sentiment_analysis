@@ -43,12 +43,51 @@ The database was extracted from https://github.com/clausd/Moon and it's original
 - Thirdly, open a new tab in your web browser and use the link provided by the terminal to access the API. Try to run some queries to verify everything is correct.
 
     <img src="images/api.jpg">
-    
+
 - Open Analysis.ipynb and execute all the cells to show up the data analysis.
 
 - Open Send_your_message.ipynb and follow the instructions inside to perform POSTs inside the MySQL database.
 
 - Enjoy!
+
+## 4. Function definitions
+
+Summary of the tools folder:
+
+- Call_speakers: uses API request to extract the necessary data to perform data analyses.
+- Plots: uses Call_speakers functions to plot data.
+- Postdelete: defines functions to POST or DELETE messages inside MySQL's database.
+- sql_queries: the queries that will run the API in the main.py file.
+
+## 5. Data analysis
+
+### 5.1 The descent
+
+The Apollo 11 lunar module Eagle took about 12 and a half to go from its orbital speed to a soft touchdown on Mare Tranquilitates. This was the first Apollo landing and it would prove to be the most arduous.
+
+About 500 km from the landing site, Eagle's main engine would be ignited to begin the descent to the surface, an event called Power Descent Initation, or PDI.
+
+Eagle problems began even as the spacecraft appeared from around the Moon's limb, it had been fitted with metal sheets below it's maneuvering thrusters to protect its lower section from their hot exhaust, but these were interfering with the reception pattern of his dish antenna.
+
+Also, unknown to the astronauts an error in their trajectory had moved the probable landing six kilometers downrange of its intended spot and nearly into unplanned territory.
+
+Once the burn began, further difficulties would mark Eagle's final descent to the surface.
+
+**The following plot shows the complete sentiment analysis of the last 13 minutes of the landing approach phase, where various problem appear during the burnout**
+
+<img src="images/Analysis/descent.jpg">
+
+The graph is divided into two parts: the Aldrin compound and the Armstrong compound. During the descent phase, Aldrin is the one taking control of the spacecraft, so he has the most interaction of the two. Armstrong was only in charge of overseeing the computer and Collins was left in charge of the Apollo spacecraft in orbit to the moon.
+
+The sentimental analysis shows quite pronounced fluctuations, but much more positive than negative. However, the sentimental analysis fails to interpret some sentences.
+
+Most of the positive sentences are those in which the pilots see that everything is in order and that they can continue. Some negative sentences are those where the alarm signal is raised.
+
+I think it is especially important to note how cool the astronauts' minds were. They were not moved by anything and all their sentences obeyed commands. It is not until they reach the surface that they give more subjective details of what they are experiencing.
+
+<video width=400 controls>
+        <source src="videos/369354.mp4" type="video/mp4">
+</video>
 
 ## Links and Resources
 
