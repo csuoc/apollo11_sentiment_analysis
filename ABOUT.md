@@ -52,3 +52,8 @@ Delimited to three speakers
 
 # POSTING
 
+**ROUTE:** /insertrow
+
+# DELETING
+
+**ROUTE:** /deleterow
