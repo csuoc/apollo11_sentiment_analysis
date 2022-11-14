@@ -105,7 +105,7 @@ The descriptive statistical analysis is also noteworthy. For example, Armstrong 
 
 ### 5.3. One small step for a man, one giant leap for mankind
 
-<img src="images/stepmoon.JPG" width=300>
+<img src="images/stepmoon.jpg" width=300>
 
 **It's really curious to see how the sentence that changed the course of the Cold War has a compound value of... ZERO** However, the following sentence gains more popularity.
 
