@@ -31,7 +31,22 @@ def descent_analysis():
     fig3.update_yaxes(title_text="Compound")
     fig3.update_traces(showlegend=True)
 
-    return fig3.show()
+
+    fig4 = px.box(aldrin_descent, x="speaker", y="compound")
+    fig4.update_traces(line_color='green', name="Aldrin")
+
+    fig5 = px.box(armstrong_eagle, x="speaker", y="compound")
+    fig5.update_traces(line_color='blue', name="Armstrong")
+
+    fig6 = go.Figure(data=fig4.data + fig5.data,
+            layout=go.Layout(
+            title=go.layout.Title(text="Descriptive statistics")
+                            ))
+    fig6.update_xaxes(title_text="Speaker")
+    fig6.update_yaxes(title_text="Compound")
+    fig6.update_traces(showlegend=True)
+
+    return fig3.show(), fig6.show()
 
 # Aldrin vs Armstrong full moonwalk (3 hours)
 
@@ -57,7 +72,21 @@ def eva_analysis():
     fig3.update_yaxes(title_text="Compound >0.5 or < -0.5")
     fig3.update_traces(showlegend=True)
 
-    return fig3.show()
+    fig4 = px.box(aldrin_eva, x="speaker", y="compound")
+    fig4.update_traces(line_color='green', name="Aldrin")
+
+    fig5 = px.box(armstrong_eva, x="speaker", y="compound")
+    fig5.update_traces(line_color='blue', name="Armstrong")
+
+    fig6 = go.Figure(data=fig4.data + fig5.data,
+            layout=go.Layout(
+            title=go.layout.Title(text="Descriptive statistics")
+                            ))
+    fig6.update_xaxes(title_text="Speaker")
+    fig6.update_yaxes(title_text="Compound")
+    fig6.update_traces(showlegend=True)
+
+    return fig3.show(), fig6.show()
 
 # The sentence
 
@@ -66,22 +95,15 @@ def onesmallstep_analysis():
     armstrong_tran = armtran()
     armstrong_tran = armstrong_tran.loc[armstrong_tran["mission_time"] == 393888]
 
-    fig1 = px.scatter(armstrong_tran, x="mission_time", y="compound", title="Compound analysis of Armstrong's most famous sentence")
-    fig1.update_traces(line_color='blue', name="Armstrong")
-
-    fig1.update_xaxes(title_text="The moment everyone remembers")
-    fig1.update_yaxes(title_text="Compound")
-    fig1.update_traces(showlegend=True)
-
-    return fig1.show()
+    return armstrong_tran
 
 # Nixon speech
 
 def nixon_analysis():
 
     nixon_speech = nixon()
-    fig1 = px.scatter(nixon_speech, x="mission_time", y="compound", title="Compound analysis of Nixon speech")
-    fig1.update_traces(line_color='blue', name="President Nixon")
+    fig1 = px.line(nixon_speech, x="mission_time", y="compound", title="Compound analysis of Nixon speech")
+    fig1.update_traces(line_color='yellow', name="President Nixon")
 
     fig1.update_xaxes(title_text="President Nixon speech")
     fig1.update_yaxes(title_text="Compound")
