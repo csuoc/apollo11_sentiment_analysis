@@ -34,15 +34,15 @@ The database was extracted from https://github.com/clausd/Moon and it's original
 
 - Firstly, use the apollo11.csv provided in the data folder to create a MySQL schema called **apollo_transcripts** and create a table with the following structure:
 
-<img src="images/tablemysql.JPG">
+    <img src="images/tablemysql.JPG">
 
 - Secondly, open a terminal and execute **main.py** file, found in the root. The main file contains the necessary information to setup and execute the Flask API. It also connects to MySQL server and your table recently created.
 
-<img src="images/terminal.JPG">
+    <img src="images/terminal.JPG" width=300>
 
 - Thirdly, open a new tab in your web browser and use the link provided by the terminal to access the API. Try to run some queries to verify everything is correct.
 
-<img src="images/api.JPG">
+    <img src="images/api.JPG" width=300>
 
 - Open Analysis.ipynb and execute all the cells to show up the data analysis.
 
@@ -84,6 +84,41 @@ The sentimental analysis shows quite pronounced fluctuations, but much more posi
 Most of the positive sentences are those in which the pilots see that everything is in order and that they can continue. Some negative sentences are those where the alarm signal is raised.
 
 I think it is especially important to note how cool the astronauts' minds were. They were not moved by anything and all their sentences obeyed commands. It is not until they reach the surface that they give more subjective details of what they are experiencing.
+
+### 5.2. The moonwalk
+
+<img src="images/firststep.jpg" width=400>
+
+Once in orbit, everything had to go very quickly because their life support was very limited.
+
+The surface walk lasted approximately 3 hours. A sentimental analysis of this walk can be found in the following graph.
+
+However, the graph has been limited to only those interactions that I considered to be very positive or very negative, i.e. >0.5 or <-0.5, otherwise the graph would be too heavy.
+
+<img src="images/Analysis/moonwalk.JPG">
+
+This graphic contains some emblematic moments from the surface walk. For example, on the second 394916 Aldrin and Armstrong chat about how comfortable they are in place.
+
+The highest peak, at 397064, is Armstrong thanking President Nixon for the speech he made to them.
+
+However, as in the previous case, the analysis fails for a supposedly positive sentence, marking it as very negative.
+
+The descriptive statistical analysis is also noteworthy. For example, Armstrong has a wider spread of data than Aldrin, so he seems to provide more subjective views. However, it is true that the range is for both positive and negative, whereas Aldrin only reports positive comments.
+
+### 5.3. One small step for a man, one giant leap for mankind
+
+<img src="images/stepmoon.jpg" width=300>
+
+**It's really curious to see how the sentence that changed the course of the Cold War has a compound value of... ZERO** However, the following sentence gains more popularity.
+
+<img src="images/Analysis/onesmallstep.JPG">
+
+### 5.4. President Nixon speech
+
+<img src="images/nixon.jpg" width=400>
+
+Richard Nixon telephoned via satellite the astronauts on the Moon. His speech was also transcribed and analyzed via sentiment analysis
+
 
 
 
