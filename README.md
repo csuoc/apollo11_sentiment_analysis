@@ -105,6 +105,7 @@ The descriptive statistical analysis is also noteworthy. For example, Armstrong 
 
 ### 5.3. One small step for a man, one giant leap for mankind
 
+<img src="images/stepmoon.JPG" width=300>
 
 **It's really curious to see how the sentence that changed the course of the Cold War has a compound value of... ZERO** However, the following sentence gains more popularity.
 
@@ -116,12 +117,7 @@ Richard Nixon telephoned via satellite the astronauts on the Moon. His speech wa
 
 <img src="images/Analysis/speech.JPG">
 
-
-<video width="400" controls>
-  <source src="videos/396990.mp4" type="video/mp4">
-</video>
-
-## Links and Resources
+## 6. Links and Resources
 
 - https://www.hq.nasa.gov/alsj/a11/a11trans.html
 - https://www.hq.nasa.gov/alsj/a11/a11transcript_pao.pdf
