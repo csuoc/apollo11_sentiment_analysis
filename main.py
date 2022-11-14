@@ -4,19 +4,18 @@ import numpy as np
 import markdown.extensions.fenced_code
 import tools.sql_queries as queries
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-
 sia = SentimentIntensityAnalyzer()
-
 
 app = Flask(__name__)
 
-# Render the markdwon
+# Render the markdown
 @app.route("/")
 def readme ():
     readme_file = open("ABOUT.md", "r")
     return markdown.markdown(readme_file.read(), extensions = ["fenced_code"])
 
 # ENDPOINTS SQL
+# ------------------------------------------
 
 # SQL get everything
 @app.route("/sql/all")
@@ -33,16 +32,19 @@ def everything_from_speaker (name):
 def everything_from_multiple_speaker (name1,name2,name3,name4):
     return jsonify(queries.get_everything_from_multiple_speaker(name1,name2,name3,name4))
 
-#SQL get only comms from ONE speaker
+# SQL get only comms from ONE speaker
 @app.route("/sql/comms/<name>")
 def lines_from_speakers (name):
     return jsonify(queries.get_just_comms(name))
 
-#SQL get only comms from MULTIPLE speakers
+# SQL get only comms from MULTIPLE speakers
 @app.route("/sql/comms/<name1>&<name2>&<name3>&<name4>")
 def lines_from_multiple_speakers (name1, name2, name3, name4):
     return jsonify(queries.get_just_multiple_comms(name1, name2, name3, name4))
 
+
+# SENTIMENT ANALYSIS
+# ----------------------------------------
 
 # SENTIMENT ANALYSIS from ONE speaker
 @app.route("/sa/<name>")
@@ -58,6 +60,9 @@ def sa_from_multiple_speakers (name1, name2, name3, name4):
     #return jsonify(everything)
     return jsonify([sia.polarity_scores(i["comms"])["compound"] for i in everything])
 
+# POST AND DELETE
+# -----------------------------------------
+
 # POST
 @app.route("/insertrow", methods=["POST"])
 def try_post ():
@@ -71,6 +76,16 @@ def try_post ():
     queries.insert_one_row(mission_time, comms, speaker)
     return f"Query succesfully inserted"
 
+# DELETE
+@app.route("/deleterow", methods=["POST"])
+def try_delete ():
+    # Decoding params
+    my_params = request.args
+    speaker = my_params["speaker"]
+
+    # Passing to my function: remove
+    queries.delete_one_row(speaker)
+    return f"Query succesfully deleted"
 
 if __name__ == "__main__":
     app.run(port=9000, debug=True)

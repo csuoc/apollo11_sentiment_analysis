@@ -1,5 +1,8 @@
+# Import box
 from config.sql_connection import engine
 import pandas as pd
+
+# Defining queries
 
 def get_everything ():
     query = """SELECT * FROM apollo11;"""
@@ -46,4 +49,9 @@ def insert_one_row (mission_time, comms, speaker):
     engine.execute(query)
     return f"Correctly introduced!"
 
-
+def delete_one_row (speaker):
+    query = f"""DELETE FROM apollo11
+            WHERE speaker = '{speaker}';
+            """
+    engine.execute(query)
+    return f"Sucessfully deleted!"
