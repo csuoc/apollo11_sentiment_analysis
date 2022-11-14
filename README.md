@@ -75,7 +75,7 @@ Once the burn began, further difficulties would mark Eagle's final descent to th
 
 **The following plot shows the complete sentiment analysis of the last 13 minutes of the landing approach phase, where various problem appear during the burnout**
 
-<img src="images/Analysis/descent.jpg">
+![](images/Analysis/Descent.JPG)
 
 The graph is divided into two parts: the Aldrin compound and the Armstrong compound. During the descent phase, Aldrin is the one taking control of the spacecraft, so he has the most interaction of the two. Armstrong was only in charge of overseeing the computer and Collins was left in charge of the Apollo spacecraft in orbit to the moon.
 
